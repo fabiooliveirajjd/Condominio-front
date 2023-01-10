@@ -1,0 +1,17 @@
+.container {
+    block-size: 100%;
+
+}
+
+.sidenav {
+    inline-size: 15rem;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(241deg, #FFFFFF 1%, #5c5a5a 99%);
+
+
+}
+
+img {
+    inline-size: 100%;
+
+}

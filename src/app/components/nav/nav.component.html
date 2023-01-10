@@ -1,0 +1,37 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened>
+    <mat-nav-list class="nav-list">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <a mat-list-item routerLink="condominos">
+        <i class="material-icons">home</i> Condôminos
+      </a>
+
+      <br />
+      <br />
+      <a mat-list-item routerLink="">
+        <i class="material-icons">home</i>Administradores
+      </a>
+      <br />
+      <br />
+      <a mat-list-item routerLink="">
+        <i class="material-icons">home</i> Taxa de Condomínio
+      </a>
+      <br />
+      <br />
+      <a mat-list-item routerLink="">
+        <i class="material-icons">home</i> Contas
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
