@@ -7,11 +7,11 @@ import {Condomino} from "../../model/condomino";
 import {CondominoService} from "../../services/condomino.service";
 
 @Component({
-  selector: "app-condomino-update",
-  templateUrl: "./condomino-update.component.html",
-  styleUrls: ["./condomino-update.component.css"]
+  selector: "app-condomino-delete",
+  templateUrl: "./condomino-delete.component.html",
+  styleUrls: ["./condomino-delete.component.css"]
 })
-export class CondominoUpdateComponent {
+export class CondominoDeleteComponent {
   condomino: Condomino = {
     idCondomino: "",
     nome: "",
@@ -52,9 +52,9 @@ export class CondominoUpdateComponent {
       this.condomino = resposta;
     });
   }
-  update(): void {
-    this.service.update(this.condomino).subscribe(() => {
-      alert("Condomino atualizado com sucesso");
+  delete(): void {
+    this.service.delete(this.condomino.idCondomino).subscribe(() => {
+      alert("Condomino deletado com sucesso");
       this.router.navigate(["/condominos"]);
     });
   }

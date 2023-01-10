@@ -3,12 +3,11 @@
     <h1 class="fullWildth">ATUALIZAR MORADOR</h1>
 
     <mat-form-field class="fullWildth" appearance="fill">
-      <mat-label>Nome</mat-label>
+      <mat-label>NOME</mat-label>
       <input
         [(ngModel)]="condomino.nome"
         nome="nome"
         [formControl]="nome"
-        required
         matInput
         placeholder="Ex... Fabio Santos Oliveira"
         maxlength="50" />
@@ -16,36 +15,33 @@
     </mat-form-field>
 
     <mat-form-field class="fullWildth" appearance="fill">
-      <mat-label>Contato</mat-label>
+      <mat-label>CONTATO</mat-label>
       <input
         [(ngModel)]="condomino.contato"
         nome="contato"
         [formControl]="contato"
-        required
         matInput
         placeholder="Ex...61 999999999" />
       <mat-icon matSuffix>dialpad</mat-icon>
     </mat-form-field>
 
     <mat-form-field class="fullWildth" appearance="fill">
-      <mat-label>Email</mat-label>
+      <mat-label>EMAIL</mat-label>
       <input
         [(ngModel)]="condomino.email"
         nome="email"
         [formControl]="email"
-        required
         matInput
         placeholder="Ex..fabio@mail.com" />
       <mat-icon matSuffix>alternate_email</mat-icon>
     </mat-form-field>
 
     <mat-form-field class="fullWildth" appearance="fill">
-      <mat-label>Unidade</mat-label>
+      <mat-label>UNIDADE</mat-label>
       <input
         [(ngModel)]="condomino.unidade"
         nome="unidade"
         [formControl]="unidade"
-        required
         matInput
         placeholder="Ex...123456" />
       <mat-icon matSuffix>vpn_key</mat-icon>
@@ -56,14 +52,14 @@
       class="fullWildth mat-elevation-z8"
       mat-stroked-button
       color="warn">
-      Atualizar
+      ATUALIZAR
     </button>
 
     <button
       routerLink="../../"
       class="fullWildth mat-elevation-z8"
       mat-stroked-button>
-      Voltar
+      VOLTAR
     </button>
   </div>
 </div>

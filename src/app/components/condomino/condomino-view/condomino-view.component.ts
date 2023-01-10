@@ -7,11 +7,11 @@ import {Condomino} from "../../model/condomino";
 import {CondominoService} from "../../services/condomino.service";
 
 @Component({
-  selector: "app-condomino-update",
-  templateUrl: "./condomino-update.component.html",
-  styleUrls: ["./condomino-update.component.css"]
+  selector: "app-condomino-view",
+  templateUrl: "./condomino-view.component.html",
+  styleUrls: ["./condomino-view.component.css"]
 })
-export class CondominoUpdateComponent {
+export class CondominoViewComponent {
   condomino: Condomino = {
     idCondomino: "",
     nome: "",
@@ -38,24 +38,9 @@ export class CondominoUpdateComponent {
     this.findById();
   }
 
-  validaCampos(): boolean {
-    return (
-      this.nome.valid &&
-      this.contato.valid &&
-      this.email.valid &&
-      this.unidade.valid
-    );
-  }
-
   findById(): void {
     this.service.findById(this.condomino.idCondomino).subscribe((resposta) => {
       this.condomino = resposta;
-    });
-  }
-  update(): void {
-    this.service.update(this.condomino).subscribe(() => {
-      alert("Condomino atualizado com sucesso");
-      this.router.navigate(["/condominos"]);
     });
   }
 }

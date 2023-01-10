@@ -30,9 +30,11 @@ import {NavComponent} from "./components/nav/nav.component";
 import { CondominoListComponent } from './components/condomino/condomino-list/condomino-list.component';
 import { CondominoCreateComponent } from './components/condomino/condomino-create/condomino-create.component';
 import { CondominoUpdateComponent } from './components/condomino/condomino-update/condomino-update.component';
+import { CondominoViewComponent } from './components/condomino/condomino-view/condomino-view.component';
+import { CondominoDeleteComponent } from './components/condomino/condomino-delete/condomino-delete.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent, CondominoUpdateComponent],
+  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent, CondominoUpdateComponent, CondominoViewComponent, CondominoDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

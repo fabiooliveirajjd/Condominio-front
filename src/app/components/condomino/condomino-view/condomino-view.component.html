@@ -1,6 +1,6 @@
 <div class="container mat-elevation-z8">
   <div class="form">
-    <h1 class="fullWildth">ADICIONAR MORADOR</h1>
+    <h1 class="fullWildth">ATUALIZAR MORADOR</h1>
 
     <mat-form-field class="fullWildth" appearance="fill">
       <mat-label>NOME</mat-label>
@@ -8,7 +8,7 @@
         [(ngModel)]="condomino.nome"
         nome="nome"
         [formControl]="nome"
-        required
+        [disabled]="true"
         matInput
         placeholder="Ex... Fabio Santos Oliveira"
         maxlength="50" />
@@ -21,7 +21,7 @@
         [(ngModel)]="condomino.contato"
         nome="contato"
         [formControl]="contato"
-        required
+        [disabled]="true"
         matInput
         placeholder="Ex...61 999999999" />
       <mat-icon matSuffix>dialpad</mat-icon>
@@ -33,7 +33,7 @@
         [(ngModel)]="condomino.email"
         nome="email"
         [formControl]="email"
-        required
+        [disabled]="true"
         matInput
         placeholder="Ex..fabio@mail.com" />
       <mat-icon matSuffix>alternate_email</mat-icon>
@@ -45,22 +45,14 @@
         [(ngModel)]="condomino.unidade"
         nome="unidade"
         [formControl]="unidade"
-        required
+        [disabled]="true"
         matInput
         placeholder="Ex...123456" />
       <mat-icon matSuffix>vpn_key</mat-icon>
     </mat-form-field>
 
     <button
-      (click)="create()"
-      class="fullWildth mat-elevation-z8"
-      mat-stroked-button
-      color="warn">
-      CADASTRAR
-    </button>
-
-    <button
-      routerLink="../"
+      routerLink="../../"
       class="fullWildth mat-elevation-z8"
       mat-stroked-button>
       VOLTAR
