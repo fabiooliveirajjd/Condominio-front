@@ -1,3 +1,4 @@
+import {CondominoUpdateComponent} from "./condomino/condomino-update/condomino-update.component";
 import {CondominoCreateComponent} from "./condomino/condomino-create/condomino-create.component";
 import {CondominoListComponent} from "./condomino/condomino-list/condomino-list.component";
 import {NavComponent} from "./nav/nav.component";
@@ -10,7 +11,11 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {path: "condominos", component: CondominoListComponent},
-      {path: "condominos/create", component: CondominoCreateComponent}
+      {path: "condominos/create", component: CondominoCreateComponent},
+      {
+        path: "condominos/update/:idCondomino",
+        component: CondominoUpdateComponent
+      }
     ]
   }
 ];

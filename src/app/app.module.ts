@@ -29,9 +29,10 @@ import {ToastrModule} from "ngx-toastr";
 import {NavComponent} from "./components/nav/nav.component";
 import { CondominoListComponent } from './components/condomino/condomino-list/condomino-list.component';
 import { CondominoCreateComponent } from './components/condomino/condomino-create/condomino-create.component';
+import { CondominoUpdateComponent } from './components/condomino/condomino-update/condomino-update.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent],
+  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent, CondominoUpdateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
