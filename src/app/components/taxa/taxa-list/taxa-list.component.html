@@ -1,13 +1,13 @@
 <div>
   <div class="container">
-    <h1>LISTA DE CONDÔMINOS</h1>
+    <h1>TAXA DE CONDOMÍNIO</h1>
 
     <button routerLink="create" class="mat-elevation-z8" mat-stroked-button>
-      ADICIONAR CONDÔMINO
+      CRIAR TAXA
     </button>
 
     <mat-form-field class="container1">
-      <mat-label>PESQUISAR CONDÔMINO POR NOME</mat-label>
+      <mat-label>PESQUISAR MORADOR</mat-label>
       <input
         matInput
         (keyup)="applyFilter($event)"
@@ -17,41 +17,44 @@
 
     <div class="mat-elevation-z8">
       <table class="container1" mat-table [dataSource]="dataSource">
-        <ng-container matColumnDef="idCondomino">
+        <ng-container matColumnDef="idTaxaCondominio">
           <th mat-header-cell *matHeaderCellDef>ID</th>
-          <td mat-cell *matCellDef="let element">{{ element.idCondomino }}</td>
+          <td mat-cell *matCellDef="let element">
+            {{ element.idTaxaCondominio }}
+          </td>
         </ng-container>
 
-        <ng-container matColumnDef="nome">
-          <th mat-header-cell *matHeaderCellDef>NOME</th>
-          <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
+        <ng-container matColumnDef="condomino">
+          <th mat-header-cell *matHeaderCellDef>MORADOR</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.condomino.nome }}
+          </td>
         </ng-container>
 
-        <ng-container matColumnDef="contato">
-          <th mat-header-cell *matHeaderCellDef>CPF</th>
-          <td mat-cell *matCellDef="let element">{{ element.contato }}</td>
+        <ng-container matColumnDef="statusTaxaPagamento">
+          <th mat-header-cell *matHeaderCellDef>STATUS DO PAGAMENTO</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.statusTaxaPagamento }}
+          </td>
         </ng-container>
 
-        <ng-container matColumnDef="email">
-          <th mat-header-cell *matHeaderCellDef>EMAIL</th>
-          <td mat-cell *matCellDef="let element">{{ element.email }}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="unidade">
-          <th mat-header-cell *matHeaderCellDef>UNIDADE</th>
-          <td mat-cell *matCellDef="let element">{{ element.unidade }}</td>
+        <ng-container matColumnDef="dataPagamento">
+          <th mat-header-cell *matHeaderCellDef>DATA DO PAGAMENTO</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.dataPagamento }}
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="acoes">
           <th mat-header-cell *matHeaderCellDef>AÇÔES</th>
           <td mat-cell *matCellDef="let element">
-            <a routerLink="update/{{ element.idCondomino }}">
+            <a routerLink="update/{{ element.idTaxaCondominio }}">
               <i class="material-icons edit">edit</i>
             </a>
-            <a routerLink="delete/{{ element.idCondomino }}">
+            <a routerLink="delete/{{ element.idTaxaCondominio }}">
               <i class="material-icons delete">delete</i>
             </a>
-            <a routerLink="view/{{ element.idCondomino }}">
+            <a routerLink="view/{{ element.idTaxaCondominio }}">
               <i class="material-icons view">visibility</i>
             </a>
           </td>

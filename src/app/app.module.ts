@@ -32,9 +32,11 @@ import { CondominoCreateComponent } from './components/condomino/condomino-creat
 import { CondominoUpdateComponent } from './components/condomino/condomino-update/condomino-update.component';
 import { CondominoViewComponent } from './components/condomino/condomino-view/condomino-view.component';
 import { CondominoDeleteComponent } from './components/condomino/condomino-delete/condomino-delete.component';
+import { TaxaCreateComponent } from './components/taxa/taxa-create/taxa-create.component';
+import { TaxaListComponent } from './components/taxa/taxa-list/taxa-list.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent, CondominoUpdateComponent, CondominoViewComponent, CondominoDeleteComponent],
+  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent, CondominoUpdateComponent, CondominoViewComponent, CondominoDeleteComponent, TaxaCreateComponent, TaxaListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

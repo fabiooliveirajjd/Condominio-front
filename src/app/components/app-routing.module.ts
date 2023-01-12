@@ -1,3 +1,4 @@
+import {TaxaListComponent} from "./taxa/taxa-list/taxa-list.component";
 import {CondominoViewComponent} from "./condomino/condomino-view/condomino-view.component";
 import {CondominoUpdateComponent} from "./condomino/condomino-update/condomino-update.component";
 import {CondominoCreateComponent} from "./condomino/condomino-create/condomino-create.component";
@@ -18,14 +19,13 @@ const routes: Routes = [
         path: "condominos/update/:idCondomino",
         component: CondominoUpdateComponent
       },
-      {
-        path: "condominos/view/:idCondomino",
-        component: CondominoViewComponent
-      },
+      {path: "condominos/view/:idCondomino", component: CondominoViewComponent},
       {
         path: "condominos/delete/:idCondomino",
         component: CondominoDeleteComponent
-      }
+      },
+
+      {path: "taxas", component: TaxaListComponent}
     ]
   }
 ];
