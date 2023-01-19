@@ -1,3 +1,4 @@
+import {TaxaViewComponent} from "./taxa/taxa-view/taxa-view.component";
 import {TaxaUpdateComponent} from "./taxa/taxa-update/taxa-update.component";
 import {TaxaCreateComponent} from "./taxa/taxa-create/taxa-create.component";
 import {TaxaListComponent} from "./taxa/taxa-list/taxa-list.component";
@@ -32,7 +33,8 @@ const routes: Routes = [
       {
         path: "taxas/update/:idTaxa",
         component: TaxaUpdateComponent
-      }
+      },
+      {path: "taxas/view/:idTaxa", component: TaxaViewComponent}
     ]
   }
 ];
