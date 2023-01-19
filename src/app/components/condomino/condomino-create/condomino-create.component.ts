@@ -2,7 +2,7 @@ import {Router} from "@angular/router";
 import {Component, OnInit} from "@angular/core";
 import {FormControl, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
-import {Condomino} from "../../model/condomino";
+import {Condomino} from "../../models/condomino";
 import {CondominoService} from "../../services/condomino.service";
 @Component({
   selector: "app-condomino-create",
@@ -42,7 +42,7 @@ export class CondominoCreateComponent {
 
   create(): void {
     this.service.create(this.condomino).subscribe(() => {
-      alert("Condomino cadastrado com sucesso");
+      alert("Condômino cadastrado com sucesso");
       this.router.navigate(["/condominos"]);
     });
   }

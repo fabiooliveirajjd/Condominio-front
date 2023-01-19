@@ -27,16 +27,26 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppComponent} from "./app.component";
 import {ToastrModule} from "ngx-toastr";
 import {NavComponent} from "./components/nav/nav.component";
-import { CondominoListComponent } from './components/condomino/condomino-list/condomino-list.component';
-import { CondominoCreateComponent } from './components/condomino/condomino-create/condomino-create.component';
-import { CondominoUpdateComponent } from './components/condomino/condomino-update/condomino-update.component';
-import { CondominoViewComponent } from './components/condomino/condomino-view/condomino-view.component';
-import { CondominoDeleteComponent } from './components/condomino/condomino-delete/condomino-delete.component';
-import { TaxaCreateComponent } from './components/taxa/taxa-create/taxa-create.component';
-import { TaxaListComponent } from './components/taxa/taxa-list/taxa-list.component';
+import {CondominoListComponent} from "./components/condomino/condomino-list/condomino-list.component";
+import {CondominoCreateComponent} from "./components/condomino/condomino-create/condomino-create.component";
+import {CondominoUpdateComponent} from "./components/condomino/condomino-update/condomino-update.component";
+import {CondominoViewComponent} from "./components/condomino/condomino-view/condomino-view.component";
+import {CondominoDeleteComponent} from "./components/condomino/condomino-delete/condomino-delete.component";
+import {TaxaCreateComponent} from "./components/taxa/taxa-create/taxa-create.component";
+import {TaxaListComponent} from "./components/taxa/taxa-list/taxa-list.component";
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, CondominoListComponent, CondominoCreateComponent, CondominoUpdateComponent, CondominoViewComponent, CondominoDeleteComponent, TaxaCreateComponent, TaxaListComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    CondominoListComponent,
+    CondominoCreateComponent,
+    CondominoUpdateComponent,
+    CondominoViewComponent,
+    CondominoDeleteComponent,
+    TaxaCreateComponent,
+    TaxaListComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

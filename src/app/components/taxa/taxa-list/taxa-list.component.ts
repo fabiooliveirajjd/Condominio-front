@@ -1,8 +1,8 @@
 import {MatTableDataSource} from "@angular/material/table";
-import {Component, OnInit, ViewChild} from "@angular/core";
+import {Component, ViewChild} from "@angular/core";
 import {MatPaginator} from "@angular/material/paginator";
-import {TaxaCondominio} from "../../model/taxacondominio";
-import {TaxaCondominioService} from "../../services/taxacondominio.service";
+import {Taxa} from "../../models/taxa";
+import {TaxaService} from "../../services/taxa.service";
 
 @Component({
   selector: "app-taxa-list",
@@ -10,33 +10,34 @@ import {TaxaCondominioService} from "../../services/taxacondominio.service";
   styleUrls: ["./taxa-list.component.css"]
 })
 export class TaxaListComponent {
-  ELEMENT_DATA: TaxaCondominio[] = [];
+  ELEMENT_DATA: Taxa[] = [];
 
   displayedColumns: string[] = [
-    "idTaxaCondominio",
-    "condomino",
+    "idTaxa",
+    "nomeCondomino",
+    "unidadeCondomino",
     "statusTaxaPagamento",
     "dataPagamento",
+    "valor",
     "acoes"
   ];
-  dataSource = new MatTableDataSource<TaxaCondominio>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<Taxa>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private service: TaxaCondominioService) {}
+  constructor(private service: TaxaService) {}
 
   ngOnInit(): void {
-    this.findAll();
+    this.listarTodasAsTaxas();
   }
 
-  findAll() {
-    this.service.findAll().subscribe((resposta) => {
+  listarTodasAsTaxas() {
+    this.service.listarTodasAsTaxas().subscribe((resposta) => {
       this.ELEMENT_DATA = resposta;
-      this.dataSource = new MatTableDataSource<TaxaCondominio>(resposta);
+      this.dataSource = new MatTableDataSource<Taxa>(resposta);
       this.dataSource.paginator = this.paginator;
     });
   }
-
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

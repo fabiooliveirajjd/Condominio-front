@@ -3,7 +3,7 @@ import {Component, OnInit} from "@angular/core";
 import {FormControl, Validators} from "@angular/forms";
 
 import {ToastrService} from "ngx-toastr";
-import {Condomino} from "../../model/condomino";
+import {Condomino} from "../../models/condomino";
 import {CondominoService} from "../../services/condomino.service";
 
 @Component({

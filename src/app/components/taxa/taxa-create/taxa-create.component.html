@@ -1,45 +1,11 @@
 <div class="container mat-elevation-z8">
-  <div class="form">
+  <form class="form">
     <h1 class="fullWildth">CRIAR</h1>
-
-    <div class="status-prioridade">
-      <mat-form-field class="full-width" appearance="outline">
-        <mat-label>SELECIONE UM STATUS</mat-label>
-        <mat-select
-          [(ngModel)]="taxacondominio.statusTaxaPagamento"
-          name="statusTaxaPagamento"
-          [formControl]="statusTaxaPagamento"
-          required>
-          <mat-option value="0">ABERTO</mat-option>
-          <mat-option value="1">PAGO COM DESCONTO</mat-option>
-          <mat-option value="2">PAGO SEM DESCONTO</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
 
     <div>
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>DATA DO PAGAMENTO</mat-label>
-        <input
-          [(ngModel)]="taxacondominio.dataPagamento"
-          name="dataPagamento"
-          matInput
-          [matDatepicker]="picker" />
-        <mat-datepicker-toggle
-          matIconSuffix
-          [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </div>
-
-    <div class="condomino">
-      <mat-form-field class="full-width" appearance="outline">
         <mat-label>SELECIONE UM MORADOR</mat-label>
-        <mat-select
-          [(ngModel)]="taxacondominio.condomino"
-          name="condomino"
-          [formControl]="condomino"
-          required>
+        <mat-select [(ngModel)]="taxa.idCondomino" name="idCondomino">
           <mat-option
             *ngFor="let con of condominos"
             value="{{ con.idCondomino }}"
@@ -49,19 +15,42 @@
       </mat-form-field>
     </div>
 
-    <button
-      (click)="create()"
-      class="fullWildth mat-elevation-z8"
-      mat-stroked-button
-      color="warn">
-      CADASTRAR
-    </button>
+    <div>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>SELECIONE UM STATUS</mat-label>
+        <mat-select
+          [(ngModel)]="taxa.statusTaxaPagamento"
+          name="statusTaxaPagamento">
+          <mat-option value="0">ABERTO</mat-option>
+          <mat-option value="1">pagoComDesconto</mat-option>
+          <mat-option value="2">pagoSemDesconto</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-    <button
-      routerLink="../"
-      class="fullWildth mat-elevation-z8"
-      mat-stroked-button>
-      VOLTAR
-    </button>
-  </div>
+    <mat-form-field class="fullWildth" appearance="fill">
+      <mat-label>VALOR</mat-label>
+      <input
+        [(ngModel)]="taxa.valor"
+        name="valor"
+        required
+        matInput
+        placeholder="Ex..250" />
+      <mat-icon matSuffix>euro_symbol</mat-icon>
+    </mat-form-field>
+  </form>
+  <button
+    (click)="create()"
+    class="fullWildth mat-elevation-z8"
+    mat-stroked-button
+    color="warn">
+    CADASTRAR
+  </button>
+
+  <button
+    routerLink="../"
+    class="fullWildth mat-elevation-z8"
+    mat-stroked-button>
+    VOLTAR
+  </button>
 </div>

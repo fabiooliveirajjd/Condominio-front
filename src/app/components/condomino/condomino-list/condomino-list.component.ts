@@ -1,7 +1,7 @@
 import {MatTableDataSource} from "@angular/material/table";
-import {Component, OnInit, ViewChild} from "@angular/core";
+import {Component, ViewChild} from "@angular/core";
 import {MatPaginator} from "@angular/material/paginator";
-import {Condomino} from "../../model/condomino";
+import {Condomino} from "../../models/condomino";
 import {CondominoService} from "../../services/condomino.service";
 
 @Component({
