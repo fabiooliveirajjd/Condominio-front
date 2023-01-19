@@ -34,6 +34,7 @@ import {CondominoViewComponent} from "./components/condomino/condomino-view/cond
 import {CondominoDeleteComponent} from "./components/condomino/condomino-delete/condomino-delete.component";
 import {TaxaCreateComponent} from "./components/taxa/taxa-create/taxa-create.component";
 import {TaxaListComponent} from "./components/taxa/taxa-list/taxa-list.component";
+import { TaxaUpdateComponent } from './components/taxa/taxa-update/taxa-update.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {TaxaListComponent} from "./components/taxa/taxa-list/taxa-list.component
     CondominoViewComponent,
     CondominoDeleteComponent,
     TaxaCreateComponent,
-    TaxaListComponent
+    TaxaListComponent,
+    TaxaUpdateComponent
   ],
   imports: [
     BrowserModule,

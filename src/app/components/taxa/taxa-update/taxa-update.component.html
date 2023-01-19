@@ -1,0 +1,56 @@
+<div class="container mat-elevation-z8">
+  <form class="form">
+    <h1 class="fullWildth">ATUALIZAR</h1>
+
+    <div>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>{{ taxa.nomeCondomino }}</mat-label>
+        <mat-select [(ngModel)]="taxa.nomeCondomino" name="nomeCondomino">
+          <mat-option
+            *ngFor="let con of condominos"
+            value="{{ con.idCondomino }}"
+            >{{ con.nome }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>{{ taxa.statusTaxaPagamento }}</mat-label>
+        <mat-select
+          [(ngModel)]="taxa.statusTaxaPagamento"
+          name="statusTaxaPagamento">
+          <mat-option value="0">ABERTO</mat-option>
+          <mat-option value="1">pagoComDesconto</mat-option>
+          <mat-option value="2">pagoSemDesconto</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="fullWildth" appearance="fill">
+      <mat-label>{{ taxa.valor }}</mat-label>
+      <input
+        [(ngModel)]="taxa.valor"
+        name="valor"
+        required
+        matInput
+        placeholder="Ex..250" />
+      <mat-icon matSuffix>euro_symbol</mat-icon>
+    </mat-form-field>
+  </form>
+  <button
+    (click)="update()"
+    class="fullWildth mat-elevation-z8"
+    mat-stroked-button
+    color="warn">
+    ATUALIZAR
+  </button>
+
+  <button
+    routerLink="../../"
+    class="fullWildth mat-elevation-z8"
+    mat-stroked-button>
+    VOLTAR
+  </button>
+</div>
