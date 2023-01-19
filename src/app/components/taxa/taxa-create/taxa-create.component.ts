@@ -34,6 +34,7 @@ export class TaxaCreateComponent implements OnInit {
 
   create(): void {
     this.taxaService.create(this.taxa).subscribe((resposta) => {
+      alert("CADASTRADO COM SUCESSO");
       this.router.navigate(["/taxas"]);
       console.log();
     });

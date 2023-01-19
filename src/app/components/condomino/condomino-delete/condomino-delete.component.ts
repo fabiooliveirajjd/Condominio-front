@@ -54,7 +54,7 @@ export class CondominoDeleteComponent {
   }
   delete(): void {
     this.service.delete(this.condomino.idCondomino).subscribe(() => {
-      alert("Condomino deletado com sucesso");
+      alert("CONDÔMINO DELETADO COM SUCESSO");
       this.router.navigate(["/condominos"]);
     });
   }

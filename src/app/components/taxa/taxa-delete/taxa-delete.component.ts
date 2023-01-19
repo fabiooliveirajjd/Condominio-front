@@ -6,11 +6,11 @@ import {CondominoService} from "../../services/condomino.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: "app-taxa-update",
-  templateUrl: "./taxa-update.component.html",
-  styleUrls: ["./taxa-update.component.css"]
+  selector: "app-taxa-delete",
+  templateUrl: "./taxa-delete.component.html",
+  styleUrls: ["./taxa-delete.component.css"]
 })
-export class TaxaUpdateComponent implements OnInit {
+export class TaxaDeleteComponent {
   taxa: Taxa = {
     nomeCondomino: "",
     unidadeCondomino: "",
@@ -40,9 +40,9 @@ export class TaxaUpdateComponent implements OnInit {
     });
   }
 
-  update(): void {
-    this.taxaService.update(this.taxa).subscribe((resposta) => {
-      alert("ATUALIZADO COM SUCESSO");
+  delete(): void {
+    this.taxaService.delete(this.taxa.idTaxa).subscribe((resposta) => {
+      alert("DELETADO COM SUCESSO");
       this.router.navigate(["/taxas"]);
       console.log();
     });

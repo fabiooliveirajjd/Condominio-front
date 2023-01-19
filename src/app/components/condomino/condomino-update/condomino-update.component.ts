@@ -54,7 +54,7 @@ export class CondominoUpdateComponent {
   }
   update(): void {
     this.service.update(this.condomino).subscribe(() => {
-      alert("Condomino atualizado com sucesso");
+      alert("CONDÔMINO ATUALIZADO COM SUCESSO");
       this.router.navigate(["/condominos"]);
     });
   }

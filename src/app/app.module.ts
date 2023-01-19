@@ -36,6 +36,7 @@ import {TaxaCreateComponent} from "./components/taxa/taxa-create/taxa-create.com
 import {TaxaListComponent} from "./components/taxa/taxa-list/taxa-list.component";
 import { TaxaUpdateComponent } from './components/taxa/taxa-update/taxa-update.component';
 import { TaxaViewComponent } from './components/taxa/taxa-view/taxa-view.component';
+import { TaxaDeleteComponent } from './components/taxa/taxa-delete/taxa-delete.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { TaxaViewComponent } from './components/taxa/taxa-view/taxa-view.compone
     TaxaCreateComponent,
     TaxaListComponent,
     TaxaUpdateComponent,
-    TaxaViewComponent
+    TaxaViewComponent,
+    TaxaDeleteComponent
   ],
   imports: [
     BrowserModule,
