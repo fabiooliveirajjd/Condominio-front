@@ -1,3 +1,4 @@
+import {DespesaListComponent} from "./despesa/despesa-list/despesa-list.component";
 import {TaxaDeleteComponent} from "./taxa/taxa-delete/taxa-delete.component";
 import {TaxaViewComponent} from "./taxa/taxa-view/taxa-view.component";
 import {TaxaUpdateComponent} from "./taxa/taxa-update/taxa-update.component";
@@ -36,7 +37,9 @@ const routes: Routes = [
         component: TaxaUpdateComponent
       },
       {path: "taxas/view/:idTaxa", component: TaxaViewComponent},
-      {path: "taxas/delete/:idTaxa", component: TaxaDeleteComponent}
+      {path: "taxas/delete/:idTaxa", component: TaxaDeleteComponent},
+
+      {path: "despesas", component: DespesaListComponent}
     ]
   }
 ];

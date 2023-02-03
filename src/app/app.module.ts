@@ -34,9 +34,10 @@ import {CondominoViewComponent} from "./components/condomino/condomino-view/cond
 import {CondominoDeleteComponent} from "./components/condomino/condomino-delete/condomino-delete.component";
 import {TaxaCreateComponent} from "./components/taxa/taxa-create/taxa-create.component";
 import {TaxaListComponent} from "./components/taxa/taxa-list/taxa-list.component";
-import { TaxaUpdateComponent } from './components/taxa/taxa-update/taxa-update.component';
-import { TaxaViewComponent } from './components/taxa/taxa-view/taxa-view.component';
-import { TaxaDeleteComponent } from './components/taxa/taxa-delete/taxa-delete.component';
+import {TaxaUpdateComponent} from "./components/taxa/taxa-update/taxa-update.component";
+import {TaxaViewComponent} from "./components/taxa/taxa-view/taxa-view.component";
+import {TaxaDeleteComponent} from "./components/taxa/taxa-delete/taxa-delete.component";
+import {DespesaListComponent} from "./components/despesa/despesa-list/despesa-list.component";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { TaxaDeleteComponent } from './components/taxa/taxa-delete/taxa-delete.c
     TaxaListComponent,
     TaxaUpdateComponent,
     TaxaViewComponent,
-    TaxaDeleteComponent
+    TaxaDeleteComponent,
+    DespesaListComponent
   ],
   imports: [
     BrowserModule,
