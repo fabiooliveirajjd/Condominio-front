@@ -52,7 +52,8 @@
     </mat-form-field>
 
     <button
-      (click)="create()"
+      [disabled]="!validaCampos()"
+      (click)="salvarCondomino()"
       class="fullWildth mat-elevation-z8"
       mat-stroked-button
       color="warn">

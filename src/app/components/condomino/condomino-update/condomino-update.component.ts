@@ -1,5 +1,5 @@
 import {ActivatedRoute, Router} from "@angular/router";
-import {Component, OnInit} from "@angular/core";
+import {Component} from "@angular/core";
 import {FormControl, Validators} from "@angular/forms";
 
 import {ToastrService} from "ngx-toastr";
@@ -35,7 +35,7 @@ export class CondominoUpdateComponent {
   ngOnInit(): void {
     this.condomino.idCondomino =
       this.route.snapshot.paramMap.get("idCondomino");
-    this.findById();
+    this.buscarCondominoPorId();
   }
 
   validaCampos(): boolean {
@@ -47,14 +47,16 @@ export class CondominoUpdateComponent {
     );
   }
 
-  findById(): void {
-    this.service.findById(this.condomino.idCondomino).subscribe((resposta) => {
-      this.condomino = resposta;
-    });
+  buscarCondominoPorId(): void {
+    this.service
+      .buscarCondominoPorId(this.condomino.idCondomino)
+      .subscribe((resposta) => {
+        this.condomino = resposta;
+      });
   }
-  update(): void {
-    this.service.update(this.condomino).subscribe(() => {
-      alert("CONDÔMINO ATUALIZADO COM SUCESSO");
+  alterarCondomino(): void {
+    this.service.alterarCondomino(this.condomino).subscribe(() => {
+      this.toast.success("CONDÔMINO ATUALIZADO COM SUCESSO", "ATUALIZAR");
       this.router.navigate(["/condominos"]);
     });
   }

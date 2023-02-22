@@ -29,7 +29,7 @@ export class TaxaCreateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.findAllCondominos();
+    this.listarCondominos ();
   }
 
   create(): void {
@@ -40,8 +40,8 @@ export class TaxaCreateComponent implements OnInit {
     });
   }
 
-  findAllCondominos(): void {
-    this.condominoService.findAll().subscribe((resposta) => {
+  listarCondominos(): void {
+    this.condominoService.listarCondominos().subscribe((resposta) => {
       this.condominos = resposta;
     });
   }

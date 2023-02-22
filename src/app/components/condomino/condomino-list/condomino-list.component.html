@@ -6,14 +6,7 @@
       ADICIONAR CONDÔMINO
     </button>
 
-    <mat-form-field class="container1">
-      <mat-label>PESQUISAR CONDÔMINO POR NOME</mat-label>
-      <input
-        matInput
-        (keyup)="applyFilter($event)"
-        placeholder="Digite dados do Morador"
-        #input />
-    </mat-form-field>
+    
 
     <div class="mat-elevation-z8">
       <table class="container1" mat-table [dataSource]="dataSource">

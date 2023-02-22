@@ -31,7 +31,7 @@ export class TaxaDeleteComponent {
   ngOnInit(): void {
     this.taxa.idTaxa = this.route.snapshot.paramMap.get("idTaxa");
     this.findById();
-    this.findAllCondominos();
+    this.listarCondominos();
   }
 
   findById(): void {
@@ -48,8 +48,8 @@ export class TaxaDeleteComponent {
     });
   }
 
-  findAllCondominos(): void {
-    this.condominoService.findAll().subscribe((resposta) => {
+  listarCondominos(): void {
+    this.condominoService.listarCondominos().subscribe((resposta) => {
       this.condominos = resposta;
     });
   }

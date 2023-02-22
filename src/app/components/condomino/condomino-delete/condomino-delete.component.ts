@@ -34,8 +34,8 @@ export class CondominoDeleteComponent {
 
   ngOnInit(): void {
     this.condomino.idCondomino =
-      this.route.snapshot.paramMap.get("idCondomino");
-    this.findById();
+    this.route.snapshot.paramMap.get("idCondomino");
+    this.buscarCondominoPorId();
   }
 
   validaCampos(): boolean {
@@ -47,14 +47,14 @@ export class CondominoDeleteComponent {
     );
   }
 
-  findById(): void {
-    this.service.findById(this.condomino.idCondomino).subscribe((resposta) => {
+  buscarCondominoPorId(): void {
+    this.service.buscarCondominoPorId(this.condomino.idCondomino).subscribe((resposta) => {
       this.condomino = resposta;
     });
   }
-  delete(): void {
-    this.service.delete(this.condomino.idCondomino).subscribe(() => {
-      alert("CONDÔMINO DELETADO COM SUCESSO");
+  excluirCondomino(): void {
+    this.service.excluirCondomino(this.condomino.idCondomino).subscribe(() => {
+      this.toast.success("CONDÔMINO DELETADO COM SUCESSO", "DELETAR");
       this.router.navigate(["/condominos"]);
     });
   }

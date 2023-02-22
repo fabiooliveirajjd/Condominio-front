@@ -27,14 +27,14 @@ export class CondominoListComponent {
   constructor(private service: CondominoService) {}
 
   ngOnInit(): void {
-    this.findAll();
+    this.listarCondominos();
   }
 
-  findAll() {
-    this.service.findAll().subscribe((resposta) => {
-      this.ELEMENT_DATA = resposta;
-      this.dataSource = new MatTableDataSource<Condomino>(resposta);
-      this.dataSource.paginator = this.paginator;
+  listarCondominos() {
+    this.service.listarCondominos().subscribe((resposta) => {
+    this.ELEMENT_DATA = resposta;
+    this.dataSource = new MatTableDataSource<Condomino>(resposta);
+    this.dataSource.paginator = this.paginator;
     });
   }
 

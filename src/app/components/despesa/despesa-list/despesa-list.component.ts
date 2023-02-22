@@ -14,11 +14,11 @@ export class DespesaListComponent {
 
   displayedColumns: string[] = [
     "idDespesa",
+    "caixaTotal", 
     "valorEntrada",
     "valorSaida",
     "descriminacao",
     "dataPagamento",
-    "caixaTotal",
     "acoes"
   ];
   dataSource = new MatTableDataSource<Despesa>(this.ELEMENT_DATA);

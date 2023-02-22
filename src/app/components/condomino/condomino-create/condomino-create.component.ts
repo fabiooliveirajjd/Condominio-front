@@ -40,9 +40,9 @@ export class CondominoCreateComponent {
     );
   }
 
-  create(): void {
-    this.service.create(this.condomino).subscribe(() => {
-      alert("CONDÔMINO CADASTRADO COM SUCESSO");
+  salvarCondomino(): void {
+    this.service.salvarCondomino(this.condomino).subscribe(() => {
+      this.toast.success("CONDÔMINO CADASTRADO COM SUCESSO" , "CADASTRO");
       this.router.navigate(["/condominos"]);
     });
   }
