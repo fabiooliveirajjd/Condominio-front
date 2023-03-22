@@ -1,13 +1,19 @@
 <div>
   <div class="container">
     <h1>LISTA DE CONDÔMINOS</h1>
-
+    <br />
     <button routerLink="create" class="mat-elevation-z8" mat-stroked-button>
       ADICIONAR CONDÔMINO
     </button>
-
-    
-
+    <br />
+    <mat-form-field class="container1">
+      <mat-label>Pesquisar Morador</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Digite dados do Morador"
+        #input />
+    </mat-form-field>
     <div class="mat-elevation-z8">
       <table class="container1" mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="idCondomino">
